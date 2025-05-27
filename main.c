@@ -2,11 +2,11 @@
 #include<libavformat/avformat.h>
 #include<libavcodec/avcodec.h>
 #include<libswscale/swscale.h>
-int main(){
+int main(int argc,char* argv[]){
     //Variable Declaration
 
-    const char* video ="test1.mp4";
-    const char* result ="output.mp4";
+    const char* video =argv[1];
+    const char* result =argv[2];
 
     int start=2*AV_TIME_BASE;
     int crop_time= 4*AV_TIME_BASE;
